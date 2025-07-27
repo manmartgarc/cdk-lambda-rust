@@ -1,8 +1,8 @@
 {
-  "name": "lambda-rust",
+  "name": "test",
   "version": "0.1.0",
   "bin": {
-    "lambda-rust": "bin/lambda-rust.js"
+    "test": "bin/test.js"
   },
   "scripts": {
     "build": "tsc",
@@ -21,7 +21,6 @@
   },
   "dependencies": {
     "aws-cdk-lib": "2.177.0",
-    "constructs": "^10.0.0",
-    "@cdklabs/aws-lambda-rust": "^0.0.7"
+    "constructs": "^10.0.0"
   }
 }
