@@ -7,7 +7,7 @@ use event_handler::function_handler;
 #[tokio::main]
 async fn main() -> Result<(), Error> {
     tracing::subscriber::fmt().json().init();
-    let shared_config = aws_config::load_defaults(BehaviorVersion::v2025_01_17()).await;
+    let shared_config = aws_config::load_defaults(BehaviorVersion::latest()).await;
     let s3_client = S3Client::new(&shared_config);
     run(service_fn(|event| function_handler(event, &s3_client))).await
 }
